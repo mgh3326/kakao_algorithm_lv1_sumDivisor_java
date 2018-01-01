@@ -1,10 +1,19 @@
-/*
- * Copyright (c) 2018. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
- * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
- * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
- * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
- * Vestibulum commodo. Ut rhoncus gravida arcu.
- */
+class SumDivisor {
+    public int sumDivisor(int n) {
 
-public class sumDivisor {
+        int result = n;
+        //for (int i = 1; i<n -1; i++)
+        for (int i = 1; i < n/2; i++) {//이거만 돌려도 되네
+            if (n % i == 0) {
+                result += i;
+            }
+        }
+        return result;
+    }
+
+    // 아래는 테스트로 출력해 보기 위한 코드입니다.
+    public static void main(String[] args) {
+        SumDivisor c = new SumDivisor();
+        System.out.println(c.sumDivisor(12));
+    }
 }
